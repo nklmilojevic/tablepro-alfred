@@ -1,0 +1,10 @@
+provider: claude
+model: claude-haiku-5-5
+
+style:
+  product: "search and open TablePro connections from Alfred"
+
+packages:
+  - files:
+      - file: workflow/info.plist
+        regex: '<key>version</key>\s*<string>(?P<v>[^<]+)</string>'

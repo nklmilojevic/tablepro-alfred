@@ -50,14 +50,11 @@ Produces `TablePro.alfredworkflow` in the repo root. The script regenerates the 
 
 ## Releasing
 
-Tag and push:
-
 ```sh
-git tag v0.4.0
-git push origin v0.4.0
+vesnik release --yes
 ```
 
-GitHub Actions patches `info.plist`'s version from the tag, builds the workflow, and creates a release with the bundle attached. See `.github/workflows/release.yml`.
+vesnik bumps `workflow/info.plist`, writes `CHANGELOG.md`, commits, tags and pushes. GitHub Actions still patches `info.plist`'s version from the tag, builds the workflow, and attaches the bundle to the release. See `.github/workflows/release.yml`.
 
 ## Credits
 
